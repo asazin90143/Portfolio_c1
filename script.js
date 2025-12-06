@@ -175,20 +175,56 @@ function renderProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
 
     projectsGrid.innerHTML = projectsData.map(project => `
-        <div class="project-card" onclick="window.open('${project.link}', '_blank')" style="cursor: pointer;">
-            <img src="${project.image}" alt="${project.title}" class="project-image">
-            <div class="project-content">
+        <div class="project-card" data-link="${project.link}">
+            <div class="project-preview" onclick="openPreview(event, '${project.link}')" title="Open interactive preview">
+                <iframe src="${project.link}" class="project-iframe" loading="lazy" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+                <div class="preview-badge">Preview</div>
+            </div>
+            <div class="project-content" onclick="window.open('${project.link}', '_blank')" style="cursor: pointer;">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
                 <div class="project-tags">
                     ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
                 </div>
-                <span class="project-link">
-                    View Project →
-                </span>
+                <span class="project-link">View Project →</span>
             </div>
         </div>
     `).join('');
+}
+
+// Open preview modal with interactive iframe. Stops card click from firing.
+function openPreview(event, url) {
+    event.stopPropagation();
+
+    // Create modal elements
+    const modal = document.createElement('div');
+    modal.className = 'preview-modal';
+
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'preview-close';
+    closeBtn.innerText = 'Close';
+    closeBtn.addEventListener('click', () => {
+        document.body.removeChild(modal);
+    });
+
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.loading = 'lazy';
+    iframe.setAttribute('sandbox', 'allow-scripts allow-forms allow-same-origin');
+
+    modalContent.appendChild(closeBtn);
+    modalContent.appendChild(iframe);
+    modal.appendChild(modalContent);
+
+    // Clicking outside modal content closes it
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) document.body.removeChild(modal);
+    });
+
+    document.body.appendChild(modal);
 }
 
 // ===== RENDER CERTIFICATES =====
