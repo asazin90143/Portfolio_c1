@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website built with HTML, CSS, and vanilla JavaScript. Features a minimalist dark theme with professional corporate aesthetics.
 
-![Portfolio Preview](https://via.placeholder.com/800x400/0a0a0a/2dd4bf?text=Portfolio+Website+Preview)
+![Portfolio Preview](<img width="1919" height="977" alt="image" src="https://github.com/user-attachments/assets/ce5dd721-1458-4f96-8df4-9e8176ddf2f4" />)
 
 ## 🚀 Features
 
