@@ -43,8 +43,7 @@ const projectsData = [
         image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
         link: "https://github.com/yourusername/project6",
         tags: ["Next.js", "MDX", "Vercel"]
-    }
-    ,
+    },
     {
         title: "Visuals1",
         description: "Interactive data visualizations and dashboards hosted on Render.",
@@ -56,7 +55,7 @@ const projectsData = [
 
 // ===== CERTIFICATES DATA =====
 // Add, edit, or remove certificates here
-// Each certificate needs: title, issuer, date, category, link, icon
+// Each certificate needs: title, issuer, date, category, link, icon, image
 // Categories: 'software', 'data', 'security', 'ai'
 const certificatesData = [
     {
@@ -66,7 +65,8 @@ const certificatesData = [
         category: "software",
         categoryLabel: "Software Development & Engineering",
         link: "https://aws.amazon.com/certification/",
-        icon: "🏗️"
+        icon: "🏗️",
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
     },
     {
         title: "Professional Scrum Master (PSM I)",
@@ -75,7 +75,8 @@ const certificatesData = [
         category: "software",
         categoryLabel: "Software Development & Engineering",
         link: "https://www.scrum.org/",
-        icon: "📊"
+        icon: "📊",
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop"
     },
     {
         title: "Machine Learning Specialization",
@@ -84,7 +85,8 @@ const certificatesData = [
         category: "ai",
         categoryLabel: "Artificial Intelligence & ML",
         link: "https://www.coursera.org/",
-        icon: "🤖"
+        icon: "🤖",
+        image: "https://images.unsplash.com/photo-1505685296765-3a2736de412f?w=600&h=400&fit=crop"
     },
     {
         title: "Data Science Professional Certificate",
@@ -93,7 +95,8 @@ const certificatesData = [
         category: "data",
         categoryLabel: "Data Science & Analytics",
         link: "https://www.ibm.com/training/",
-        icon: "📈"
+        icon: "📈",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
     },
     {
         title: "CompTIA Security+",
@@ -102,7 +105,8 @@ const certificatesData = [
         category: "security",
         categoryLabel: "Cybersecurity & Networking",
         link: "https://www.comptia.org/",
-        icon: "🔒"
+        icon: "🔒",
+        image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=600&h=400&fit=crop"
     },
     {
         title: "Certified Ethical Hacker (CEH)",
@@ -111,7 +115,8 @@ const certificatesData = [
         category: "security",
         categoryLabel: "Cybersecurity & Networking",
         link: "https://www.eccouncil.org/",
-        icon: "🛡️"
+        icon: "🛡️",
+        image: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&h=400&fit=crop"
     },
     {
         title: "Deep Learning Specialization",
@@ -120,7 +125,8 @@ const certificatesData = [
         category: "ai",
         categoryLabel: "Artificial Intelligence & ML",
         link: "https://www.deeplearning.ai/",
-        icon: "🧠"
+        icon: "🧠",
+        image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600&h=400&fit=crop"
     },
     {
         title: "Google Data Analytics Certificate",
@@ -129,7 +135,8 @@ const certificatesData = [
         category: "data",
         categoryLabel: "Data Science & Analytics",
         link: "https://grow.google/certificates/",
-        icon: "📊"
+        icon: "📊",
+        image: "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=600&h=400&fit=crop"
     },
     {
         title: "Full Stack Web Development",
@@ -138,7 +145,8 @@ const certificatesData = [
         category: "software",
         categoryLabel: "Software Development & Engineering",
         link: "https://www.freecodecamp.org/",
-        icon: "💻"
+        icon: "💻",
+        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop"
     },
     {
         title: "Cisco CCNA",
@@ -147,7 +155,8 @@ const certificatesData = [
         category: "security",
         categoryLabel: "Cybersecurity & Networking",
         link: "https://www.cisco.com/",
-        icon: "🌐"
+        icon: "🌐",
+        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
     },
     {
         title: "TensorFlow Developer Certificate",
@@ -156,7 +165,8 @@ const certificatesData = [
         category: "ai",
         categoryLabel: "Artificial Intelligence & ML",
         link: "https://www.tensorflow.org/certificate",
-        icon: "🔧"
+        icon: "🔧",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
     },
     {
         title: "Python for Data Science",
@@ -165,7 +175,8 @@ const certificatesData = [
         category: "data",
         categoryLabel: "Data Science & Analytics",
         link: "https://www.datacamp.com/",
-        icon: "🐍"
+        icon: "🐍",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
     }
 ];
 
@@ -173,11 +184,13 @@ const certificatesData = [
 // This function creates the HTML for each project card
 function renderProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
+    if (!projectsGrid) return;
 
     projectsGrid.innerHTML = projectsData.map(project => `
         <div class="project-card" data-link="${project.link}">
             <div class="project-preview" onclick="openPreview(event, '${project.link}')" title="Open interactive preview">
-                <iframe src="${project.link}" class="project-iframe" loading="lazy" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+                <iframe src="${project.link}" class="project-iframe" loading="lazy" sandbox="allow-scripts allow-forms allow-same-origin" onerror="handlePreviewError(this)"></iframe>
+                <div class="preview-error" aria-hidden="true">404 / Preview unavailable</div>
                 <div class="preview-badge">Preview</div>
             </div>
             <div class="project-content" onclick="window.open('${project.link}', '_blank')" style="cursor: pointer;">
@@ -231,6 +244,7 @@ function openPreview(event, url) {
 // This function creates the HTML for each certificate card
 function renderCertificates(filterCategory = 'all') {
     const certificatesGrid = document.getElementById('certificatesGrid');
+    if (!certificatesGrid) return;
 
     const filteredCertificates = filterCategory === 'all'
         ? certificatesData
@@ -238,6 +252,10 @@ function renderCertificates(filterCategory = 'all') {
 
     certificatesGrid.innerHTML = filteredCertificates.map(cert => `
         <div class="certificate-card" data-category="${cert.category}">
+            <div class="certificate-preview">
+                <img src="${cert.image}" alt="${cert.title} preview" loading="lazy" onerror="handleCertError(this)">
+                <div class="preview-error">Preview unavailable</div>
+            </div>
             <div class="certificate-header">
                 <div class="certificate-icon">${cert.icon}</div>
                 <div class="certificate-info">
@@ -258,6 +276,7 @@ function renderCertificates(filterCategory = 'all') {
 // Handle filter button clicks
 function setupCertificateFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
+    if (!filterButtons.length) return;
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -320,6 +339,7 @@ window.addEventListener('scroll', () => {
 // ===== CONTACT FORM =====
 const contactForm = document.getElementById('contactForm');
 
+if (contactForm) {
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -328,14 +348,32 @@ contactForm.addEventListener('submit', (e) => {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    // Here you would normally send this to a backend/email service
-    // For now, just log and show alert
-    console.log('Form submitted:', { name, email, message });
-    alert('Thanks for reaching out! I\'ll get back to you soon.');
+    const statusEl = document.getElementById('contactStatus');
+    const endpoint = 'https://formsubmit.co/ajax/kent.escala143@gmail.com';
 
-    // Reset form
-    contactForm.reset();
+    statusEl.textContent = 'Sending...';
+    statusEl.style.color = 'var(--text-secondary)';
+
+    fetch(endpoint, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+    })
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to send');
+            statusEl.textContent = 'Message sent! I will reply soon.';
+            statusEl.style.color = 'var(--accent)';
+            contactForm.reset();
+        })
+        .catch(() => {
+            statusEl.textContent = 'Could not send right now. Please try again later.';
+            statusEl.style.color = '#ff6b6b';
+        });
 });
+}
 
 // ===== INITIALIZE =====
 // Load everything when page loads
@@ -344,3 +382,18 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCertificates();
     setupCertificateFilters();
 });
+
+// ===== PREVIEW FALLBACKS =====
+function handlePreviewError(iframe) {
+    const wrapper = iframe.closest('.project-preview');
+    if (wrapper) {
+        wrapper.classList.add('error');
+    }
+}
+
+function handleCertError(img) {
+    const wrapper = img.closest('.certificate-preview');
+    if (wrapper) {
+        wrapper.classList.add('error');
+    }
+}

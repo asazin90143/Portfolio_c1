@@ -401,6 +401,29 @@ section {
     transform-origin: center center;
 }
 
+.project-preview.error iframe {
+    display: none;
+}
+
+.preview-error {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7) 10px,
+        rgba(20, 20, 20, 0.7) 10px,
+        rgba(20, 20, 20, 0.7) 20px
+    );
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
 .preview-badge {
     position: absolute;
     right: 0.5rem;
@@ -625,6 +648,33 @@ section {
     color: var(--accent-hover);
 }
 
+.certificate-preview {
+    width: 100%;
+    height: 180px;
+    margin-bottom: var(--spacing-sm);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.certificate-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.certificate-preview.error img {
+    display: none;
+}
+
+.certificate-preview .preview-error {
+    position: absolute;
+    inset: 0;
+}
+
 /* ===== CONTACT SECTION ===== */
 .contact {
     background-color: var(--bg-secondary);
@@ -784,6 +834,37 @@ section {
     font-size: 0.9rem;
 }
 
+.section-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+}
+
+.page-hero {
+    padding: 140px 0 60px;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.page-content {
+    padding: var(--spacing-xl) 0;
+}
+
+.nav-menu.always-visible {
+    display: flex;
+    gap: 1rem;
+}
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .mobile-toggle {
