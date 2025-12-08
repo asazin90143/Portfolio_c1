@@ -340,39 +340,39 @@ window.addEventListener('scroll', () => {
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-    const statusEl = document.getElementById('contactStatus');
-    const endpoint = 'https://formsubmit.co/ajax/kent.escala143@gmail.com';
+        const statusEl = document.getElementById('contactStatus');
+        const endpoint = 'https://formsubmit.co/ajax/kent.escala143@gmail.com';
 
-    statusEl.textContent = 'Sending...';
-    statusEl.style.color = 'var(--text-secondary)';
+        statusEl.textContent = 'Sending...';
+        statusEl.style.color = 'var(--text-secondary)';
 
-    fetch(endpoint, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({ name, email, message })
-    })
-        .then(response => {
-            if (!response.ok) throw new Error('Failed to send');
-            statusEl.textContent = 'Message sent! I will reply soon.';
-            statusEl.style.color = 'var(--accent)';
-            contactForm.reset();
+        fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
         })
-        .catch(() => {
-            statusEl.textContent = 'Could not send right now. Please try again later.';
-            statusEl.style.color = '#ff6b6b';
-        });
-});
+            .then(response => {
+                if (!response.ok) throw new Error('Failed to send');
+                statusEl.textContent = 'Message sent! I will reply soon.';
+                statusEl.style.color = 'var(--accent)';
+                contactForm.reset();
+            })
+            .catch(() => {
+                statusEl.textContent = 'Could not send right now. Please try again later.';
+                statusEl.style.color = '#ff6b6b';
+            });
+    });
 }
 
 // ===== INITIALIZE =====
