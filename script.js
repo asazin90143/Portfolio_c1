@@ -294,30 +294,39 @@ function setupCertificateFilters() {
 }
 
 // ===== NAVIGATION =====
-// Smooth scrolling for nav links
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        // Close mobile menu if open
-        navMenu.classList.remove('active');
-
-        // Scroll to section
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-});
-
-// Mobile menu toggle
+// Smooth scrolling for nav links and mobile menu handling
 const mobileToggle = document.getElementById('mobileToggle');
 const navMenu = document.getElementById('navMenu');
 
-mobileToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+// Only setup mobile toggle if it exists
+if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+
+        // Close mobile menu
+        if (navMenu) {
+            navMenu.classList.remove('active');
+        }
+
+        // Handle hash links on the same page
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(href);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+        // External links and page navigation will work normally
+    });
 });
 
 // ===== NAVBAR SCROLL EFFECT =====
