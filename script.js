@@ -3,6 +3,13 @@
 // Each project needs: title, description, image, link, tags array
 const projectsData = [
     {
+        title: "Visuals1",
+        description: "Interactive data visualizations and dashboards hosted on Render.",
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
+        link: "https://visuals1.onrender.com/",
+        tags: ["D3.js", "JavaScript", "Data Visualization"]
+    },
+    {
         title: "E-Commerce Platform",
         description: "Full-stack online store with payment integration, inventory management, and admin dashboard.",
         image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
@@ -44,12 +51,6 @@ const projectsData = [
         link: "https://github.com/yourusername/project6",
         tags: ["Next.js", "MDX", "Vercel"]
     },
-    {
-        title: "Visuals1",
-        description: "Interactive data visualizations and dashboards hosted on Render.",
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
-        link: "https://visuals1.onrender.com/",
-        tags: ["D3.js", "JavaScript", "Data Visualization"]
     }
 ];
 
