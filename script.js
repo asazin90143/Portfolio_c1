@@ -51,7 +51,7 @@ const projectsData = [
         link: "https://github.com/yourusername/project6",
         tags: ["Next.js", "MDX", "Vercel"]
     },
-    }
+
 ];
 
 // ===== CERTIFICATES DATA =====
