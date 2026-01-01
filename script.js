@@ -190,7 +190,6 @@ function renderProjects() {
         <div class="project-card" data-link="${project.link}">
             <div class="project-preview" onclick="openPreview(event, '${project.link}')" title="Open interactive preview">
                 <iframe src="${project.link}" class="project-iframe" loading="lazy" sandbox="allow-scripts allow-forms allow-same-origin" onerror="handlePreviewError(this)"></iframe>
-                <div class="preview-error" aria-hidden="true">404 / Preview unavailable</div>
                 <div class="preview-badge">Preview</div>
             </div>
             <div class="project-content" onclick="window.open('${project.link}', '_blank')" style="cursor: pointer;">
@@ -254,7 +253,6 @@ function renderCertificates(filterCategory = 'all') {
         <div class="certificate-card" data-category="${cert.category}">
             <div class="certificate-preview">
                 <img src="${cert.image}" alt="${cert.title} preview" loading="lazy" onerror="handleCertError(this)">
-                <div class="preview-error">Preview unavailable</div>
             </div>
             <div class="certificate-header">
                 <div class="certificate-icon">${cert.icon}</div>
