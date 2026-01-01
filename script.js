@@ -182,11 +182,13 @@ const certificatesData = [
 
 // ===== RENDER PROJECTS =====
 // This function creates the HTML for each project card
-function renderProjects() {
+function renderProjects(limit = null) {
     const projectsGrid = document.getElementById('projectsGrid');
     if (!projectsGrid) return;
 
-    projectsGrid.innerHTML = projectsData.map(project => `
+    const displayProjects = limit ? projectsData.slice(0, limit) : projectsData;
+
+    projectsGrid.innerHTML = displayProjects.map(project => `
         <div class="project-card" data-link="${project.link}">
             <div class="project-preview" onclick="openPreview(event, '${project.link}')" title="Open interactive preview">
                 <iframe src="${project.link}" class="project-iframe" loading="lazy" sandbox="allow-scripts allow-forms allow-same-origin" onerror="handlePreviewError(this)"></iframe>
@@ -241,13 +243,18 @@ function openPreview(event, url) {
 
 // ===== RENDER CERTIFICATES =====
 // This function creates the HTML for each certificate card
-function renderCertificates(filterCategory = 'all') {
+function renderCertificates(filterCategory = 'all', limit = null) {
     const certificatesGrid = document.getElementById('certificatesGrid');
     if (!certificatesGrid) return;
 
-    const filteredCertificates = filterCategory === 'all'
+    let filteredCertificates = filterCategory === 'all'
         ? certificatesData
         : certificatesData.filter(cert => cert.category === filterCategory);
+
+    // Apply limit if specified (for featured on homepage)
+    if (limit) {
+        filteredCertificates = filteredCertificates.slice(0, limit);
+    }
 
     certificatesGrid.innerHTML = filteredCertificates.map(cert => `
         <div class="certificate-card" data-category="${cert.category}">
@@ -385,8 +392,19 @@ if (contactForm) {
 // ===== INITIALIZE =====
 // Load everything when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    renderProjects();
-    renderCertificates();
+    // Check if we're on the main page or secondary page
+    const isMainPage = !document.body.classList.contains('secondary-page');
+
+    if (isMainPage) {
+        // Show only 3 featured projects and certifications on main page
+        renderProjects(3);
+        renderCertificates('all', 3);
+    } else {
+        // Show all projects and certifications on secondary pages
+        renderProjects();
+        renderCertificates();
+    }
+
     setupCertificateFilters();
 });
 
