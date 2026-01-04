@@ -31,6 +31,185 @@
     --transition: all 0.3s ease;
 }
 
+/* ===== KEYFRAME ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(-10deg) scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(45, 212, 191, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(45, 212, 191, 0.4);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -41,6 +220,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .container {
@@ -94,6 +274,31 @@ body {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    animation: fadeInDown 0.6s ease-out backwards;
+}
+
+.nav-menu li:nth-child(1) .nav-link {
+    animation-delay: 0.1s;
+}
+
+.nav-menu li:nth-child(2) .nav-link {
+    animation-delay: 0.2s;
+}
+
+.nav-menu li:nth-child(3) .nav-link {
+    animation-delay: 0.3s;
+}
+
+.nav-menu li:nth-child(4) .nav-link {
+    animation-delay: 0.4s;
+}
+
+.nav-menu li:nth-child(5) .nav-link {
+    animation-delay: 0.5s;
+}
+
+.nav-menu li:nth-child(6) .nav-link {
+    animation-delay: 0.6s;
 }
 
 .nav-link::after {
@@ -170,6 +375,7 @@ body {
 
 .hero-content {
     max-width: 700px;
+    animation: slideInLeft 0.8s ease-out;
 }
 
 .hero-tag {
@@ -182,6 +388,7 @@ body {
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: var(--spacing-sm);
+    animation: scaleIn 0.6s ease-out 0.2s backwards;
 }
 
 .hero-title {
@@ -190,6 +397,7 @@ body {
     line-height: 1.2;
     margin-bottom: var(--spacing-sm);
     letter-spacing: -1px;
+    animation: fadeInUp 0.8s ease-out 0.3s backwards;
 }
 
 .hero-description {
@@ -197,12 +405,14 @@ body {
     color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
     line-height: 1.8;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.5s backwards;
 }
 
 /* ===== BUTTONS ===== */
@@ -221,18 +431,55 @@ body {
 .btn-primary {
     background-color: var(--accent);
     color: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-hover);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 0;
 }
 
 .btn-primary:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(45, 212, 191, 0.3);
+    animation: pulse 1.5s ease-in-out;
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--text-primary);
     border: 2px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 212, 191, 0.1);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.btn-secondary:hover::before {
+    left: 0;
 }
 
 .btn-secondary:hover {
@@ -252,6 +499,7 @@ section {
     text-align: center;
     margin-bottom: var(--spacing-lg);
     letter-spacing: -0.5px;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -291,11 +539,25 @@ section {
     border-radius: 8px;
     text-align: center;
     transition: var(--transition);
+    animation: scaleIn 0.6s ease-out backwards;
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.6s;
 }
 
 .stat-card:hover {
     border-color: var(--accent);
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(45, 212, 191, 0.2);
 }
 
 .stat-number {
@@ -327,10 +589,25 @@ section {
     padding: var(--spacing-md);
     border-radius: 8px;
     transition: var(--transition);
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.skill-category:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-category:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-category:nth-child(3) {
+    animation-delay: 0.3s;
 }
 
 .skill-category:hover {
     border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(45, 212, 191, 0.2);
 }
 
 .skill-category h3 {
@@ -352,11 +629,28 @@ section {
     border-radius: 4px;
     font-size: 0.9rem;
     transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.skill-tag:hover::before {
+    transform: translateX(100%);
 }
 
 .skill-tag:hover {
     background-color: var(--accent);
     color: var(--bg-primary);
+    transform: scale(1.1);
 }
 
 /* ===== PROJECTS SECTION ===== */
@@ -377,12 +671,37 @@ section {
     overflow: hidden;
     transition: var(--transition);
     cursor: pointer;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.project-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.project-card:nth-child(6) {
+    animation-delay: 0.6s;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.02);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px rgba(45, 212, 191, 0.3);
 }
 
 .project-image {
@@ -390,6 +709,11 @@ section {
     height: 200px;
     object-fit: cover;
     background-color: var(--bg-secondary);
+    transition: var(--transition);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1);
 }
 
 /* ===== PROJECT PREVIEW (IFRAME) ===== */
@@ -463,6 +787,7 @@ section {
     border-radius: 8px;
     overflow: hidden;
     position: relative;
+    animation: scaleIn 0.4s ease-out;
 }
 
 .preview-modal iframe {
@@ -482,6 +807,13 @@ section {
     border-radius: 6px;
     cursor: pointer;
     z-index: 10;
+    transition: var(--transition);
+}
+
+.preview-close:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    transform: rotate(90deg);
 }
 
 .project-content {
@@ -526,6 +858,22 @@ section {
     font-weight: 600;
     font-size: 0.9rem;
     transition: var(--transition);
+    position: relative;
+}
+
+.project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.project-link:hover::after {
+    width: 100%;
 }
 
 .project-link:hover {
@@ -555,6 +903,45 @@ section {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInDown 0.6s ease-out backwards;
+}
+
+.filter-btn:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.filter-btn:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.filter-btn:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.filter-btn:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.filter-btn:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 212, 191, 0.1);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.filter-btn:hover::before {
+    left: 0;
 }
 
 .filter-btn:hover {
@@ -566,6 +953,7 @@ section {
     background-color: var(--accent);
     color: var(--bg-primary);
     border-color: var(--accent);
+    animation: pulse 1.5s ease-in-out;
 }
 
 .certificates-grid {
@@ -581,12 +969,37 @@ section {
     padding: var(--spacing-md);
     transition: var(--transition);
     cursor: pointer;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.certificate-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.certificate-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.certificate-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.certificate-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.certificate-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.certificate-card:nth-child(6) {
+    animation-delay: 0.6s;
 }
 
 .certificate-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) rotateY(5deg);
     border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 35px rgba(45, 212, 191, 0.25);
 }
 
 .certificate-card.hidden {
@@ -709,10 +1122,25 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     transition: var(--transition);
+    animation: fadeInLeft 0.6s ease-out backwards;
+}
+
+.contact-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.contact-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contact-item:nth-child(3) {
+    animation-delay: 0.3s;
 }
 
 .contact-item:hover {
     border-color: var(--accent);
+    transform: translateX(10px);
+    box-shadow: -5px 0 15px rgba(45, 212, 191, 0.2);
 }
 
 .contact-icon {
@@ -756,6 +1184,22 @@ section {
     font-family: var(--font-primary);
     font-size: 1rem;
     transition: var(--transition);
+    animation: slideInUp 0.6s ease-out backwards;
+}
+
+.form-group:nth-child(1) input,
+.form-group:nth-child(1) textarea {
+    animation-delay: 0.1s;
+}
+
+.form-group:nth-child(2) input,
+.form-group:nth-child(2) textarea {
+    animation-delay: 0.2s;
+}
+
+.form-group:nth-child(3) input,
+.form-group:nth-child(3) textarea {
+    animation-delay: 0.3s;
 }
 
 .form-group input:focus,
@@ -763,6 +1207,7 @@ section {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+    transform: translateY(-2px);
 }
 
 .form-group textarea {
@@ -821,6 +1266,7 @@ section {
 .footer-links a:hover,
 .social-links a:hover {
     color: var(--accent);
+    transform: translateX(5px);
 }
 
 .social-links {
