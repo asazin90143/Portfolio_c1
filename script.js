@@ -10,6 +10,13 @@ const projectsData = [
         tags: ["D3.js", "JavaScript", "Data Visualization"]
     },
     {
+        title: "Blog Platform",
+        description: "Modern blogging platform with markdown support, SEO optimization, and analytics.",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
+        link: "https://asazin90143.github.io/blogofdeath/",
+        tags: ["HTML", "CSS", "PHP"]
+    },
+    {
         title: "E-Commerce Platform",
         description: "Full-stack online store with payment integration, inventory management, and admin dashboard.",
         image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
@@ -44,13 +51,7 @@ const projectsData = [
         link: "https://github.com/yourusername/project5",
         tags: ["React Native", "Express", "Chart.js"]
     },
-    {
-        title: "Blog Platform",
-        description: "Modern blogging platform with markdown support, SEO optimization, and analytics.",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
-        link: "https://github.com/yourusername/project6",
-        tags: ["Next.js", "MDX", "Vercel"]
-    },
+
 
 ];
 
