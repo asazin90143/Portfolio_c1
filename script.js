@@ -17,6 +17,13 @@ const projectsData = [
         tags: ["HTML", "CSS", "PHP"]
     },
     {
+        title: "Portfolio ",
+        description: "Content management system for managing portfolio projects with drag-and-drop interface.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        link: "https://asazin90143.github.io/Portfolio_c1/projects.html",
+        tags: ["Javacript", "CSS", "HTML"]
+    },
+    {
         title: "E-Commerce Platform",
         description: "Full-stack online store with payment integration, inventory management, and admin dashboard.",
         image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
@@ -37,13 +44,7 @@ const projectsData = [
         link: "https://github.com/yourusername/project3",
         tags: ["React", "Firebase", "Tailwind"]
     },
-    {
-        title: "Portfolio CMS",
-        description: "Content management system for managing portfolio projects with drag-and-drop interface.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-        link: "https://github.com/yourusername/project4",
-        tags: ["Next.js", "PostgreSQL", "TypeScript"]
-    },
+  
     {
         title: "Fitness Tracker",
         description: "Mobile-first app for tracking workouts, nutrition, and progress with data visualization.",
