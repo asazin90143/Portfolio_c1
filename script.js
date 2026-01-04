@@ -20,7 +20,7 @@ const projectsData = [
         title: "Portfolio ",
         description: "Content management system for managing portfolio projects with drag-and-drop interface.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-        link: "https://asazin90143.github.io/Portfolio_c1/projects.html",
+        link: "https://asazin90143.github.io/Portfolio_c1/index.html#home",
         tags: ["Javacript", "CSS", "HTML"]
     },
     {
@@ -44,7 +44,7 @@ const projectsData = [
         link: "https://github.com/yourusername/project3",
         tags: ["React", "Firebase", "Tailwind"]
     },
-  
+
     {
         title: "Fitness Tracker",
         description: "Mobile-first app for tracking workouts, nutrition, and progress with data visualization.",
