@@ -221,6 +221,192 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     animation: fadeInUp 0.8s ease-out;
+    position: relative;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(45, 212, 191, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(45, 212, 191, 0.08) 0%, transparent 50%);
+    animation: gradientShift 15s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(45, 212, 191, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(45, 212, 191, 0.02) 1px, transparent 1px);
+    background-size: 80px 80px, 120px 120px;
+    animation: driftBackground 20s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(45, 212, 191, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 40% 20%, rgba(45, 212, 191, 0.08) 0%, transparent 50%);
+    }
+    25% {
+        background: 
+            radial-gradient(circle at 40% 60%, rgba(45, 212, 191, 0.12) 0%, transparent 50%),
+            radial-gradient(circle at 60% 40%, rgba(45, 212, 191, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(45, 212, 191, 0.06) 0%, transparent 50%);
+    }
+    50% {
+        background: 
+            radial-gradient(circle at 60% 30%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 30% 70%, rgba(45, 212, 191, 0.07) 0%, transparent 50%),
+            radial-gradient(circle at 70% 50%, rgba(45, 212, 191, 0.08) 0%, transparent 50%);
+    }
+    75% {
+        background: 
+            radial-gradient(circle at 35% 35%, rgba(45, 212, 191, 0.11) 0%, transparent 50%),
+            radial-gradient(circle at 75% 65%, rgba(45, 212, 191, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 50% 80%, rgba(45, 212, 191, 0.09) 0%, transparent 50%);
+    }
+}
+
+@keyframes driftBackground {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 80px 80px, 120px 120px;
+    }
+}
+
+/* ===== ANIMATED BACKGROUND ORBS ===== */
+.background-orbs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    mix-blend-mode: screen;
+}
+
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.8) 0%, rgba(45, 212, 191, 0) 70%);
+    top: -100px;
+    left: -100px;
+    animation: float1 20s ease-in-out infinite;
+}
+
+.orb-2 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.6) 0%, rgba(45, 212, 191, 0) 70%);
+    bottom: -50px;
+    right: -50px;
+    animation: float2 25s ease-in-out infinite;
+}
+
+.orb-3 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.5) 0%, rgba(45, 212, 191, 0) 70%);
+    top: 50%;
+    right: 10%;
+    animation: float3 22s ease-in-out infinite;
+}
+
+.orb-4 {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(45, 212, 191, 0.4) 0%, rgba(45, 212, 191, 0) 70%);
+    bottom: 20%;
+    left: 15%;
+    animation: float4 26s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, -100px);
+    }
+    50% {
+        transform: translate(50px, 100px);
+    }
+    75% {
+        transform: translate(-80px, 50px);
+    }
+}
+
+@keyframes float2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-100px, 100px);
+    }
+    50% {
+        transform: translate(-50px, -100px);
+    }
+    75% {
+        transform: translate(80px, -50px);
+    }
+}
+
+@keyframes float3 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-80px, 80px);
+    }
+    50% {
+        transform: translate(60px, 60px);
+    }
+    75% {
+        transform: translate(-60px, -80px);
+    }
+}
+
+@keyframes float4 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(90px, 50px);
+    }
+    50% {
+        transform: translate(-70px, 70px);
+    }
+    75% {
+        transform: translate(40px, -90px);
+    }
 }
 
 .container {
