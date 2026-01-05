@@ -79,7 +79,7 @@ const certificatesData = [
         categoryLabel: "Software Development & Engineering",
         link: "https://aws.amazon.com/certification/",
         icon: "🏗️",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
+        image: "G"
     },
     {
         title: "Professional Scrum Master (PSM I)",
