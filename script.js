@@ -62,6 +62,16 @@ const projectsData = [
 // Categories: 'software', 'data', 'security', 'ai'
 const certificatesData = [
     {
+        title: "SQL and Relational Databases 101",
+        issuer: "IBM Developer Skills Network",
+        date: "November 2023",
+        category: "Data",
+        categoryLabel: "Data Science & Analytics",
+        link: "https://aws.amazon.com/certification/",
+        icon: "📊",
+        image: "https://courses.cognitiveclass.ai/certificates/22721d0de4754dc5886de40f4bb5f99f"
+    },
+    {
         title: "AWS Certified Solutions Architect",
         issuer: "Amazon Web Services",
         date: "December 2024",
