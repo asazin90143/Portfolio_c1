@@ -65,11 +65,31 @@ const certificatesData = [
         title: "SQL and Relational Databases 101",
         issuer: "IBM Developer Skills Network",
         date: "November 2023",
-        category: "Data",
+        category: "data",
         categoryLabel: "Data Science & Analytics",
-        link: "https://aws.amazon.com/certification/",
+        link: "https://courses.cognitiveclass.ai/certificates/22721d0de4754dc5886de40f4bb5f99f",
         icon: "📊",
-        image: "https://courses.cognitiveclass.ai/certificates/22721d0de4754dc5886de40f4bb5f99f"
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
+    },
+    {
+        title: "Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate",
+        issuer: "Oracle",
+        date: "December 2023",
+        category: "data",
+        categoryLabel: "Data Science & Analytics",
+        link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C8DF078141A0A68FB8C11EE850E33CABEB5F77F17B7809B100541DA7A119DEFA",
+        icon: "📊",
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
+    },
+    {
+        title: "Oracle Cloud Data Management 2023 Certified Foundations Associate",
+        issuer: "Oracle",
+        date: "December 2023",
+        category: "data",
+        categoryLabel: "Data Science & Analytics",
+        link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9871AF79E8C76FF7A0129D9709621DA7C507445372989DE1F38389AAE7256E8F",
+        icon: "📊",
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
     },
     {
         title: "AWS Certified Solutions Architect",
@@ -79,7 +99,7 @@ const certificatesData = [
         categoryLabel: "Software Development & Engineering",
         link: "https://aws.amazon.com/certification/",
         icon: "🏗️",
-        image: "G"
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
     },
     {
         title: "Professional Scrum Master (PSM I)",
