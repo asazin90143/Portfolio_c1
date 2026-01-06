@@ -17,6 +17,13 @@ const projectsData = [
         tags: ["HTML", "CSS", "PHP"]
     },
     {
+        title: "Hero's Tasks",
+        description: "Hero's Tasks is a gamified productivity app that turns your to-do list into an adventure.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        link: "https://asazin90143.github.io/Heros-Tasks/",
+        tags: ["Javacript", "CSS", "HTML"]
+    },
+    {
         title: "Portfolio ",
         description: "Content management system for managing portfolio projects with drag-and-drop interface.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
