@@ -8,6 +8,7 @@ A modern, responsive portfolio website designed to showcase projects and certifi
 - **Auto-Generated Thumbnails**: Project previews are automatically generated from live links with a skeleton loading state.
 - **Interactive Previews**: Projects can be previewed in a modal iframe without leaving the page.
 - **Filtering System**: Certificates can be filtered by category (Software, Data, Security, AI).
+- **Contact Form**: Functional contact form integrated with FormSubmit.
 - **Responsive Design**: Fully adaptable layout for mobile and desktop screens.
 - **Automated Deployment**: Configured with GitHub Actions for seamless deployment to GitHub Pages.
 
