@@ -17,10 +17,16 @@ function renderProjects(limit = null) {
 
     const displayProjects = limit ? projectsData.slice(0, limit) : projectsData;
 
-    projectsGrid.innerHTML = displayProjects.map(project => `
+    projectsGrid.innerHTML = displayProjects.map(project => {
+        // Generate dynamic screenshot URL based on project link
+        const screenshotUrl = project.link
+            ? `https://s0.wp.com/mshots/v1/${encodeURIComponent(project.link)}?w=600&h=400`
+            : project.image;
+
+        return `
         <div class="project-card" data-link="${project.link}">
             <div class="project-preview" data-link="${project.link}" title="Open interactive preview">
-                <img src="${project.image}" class="project-thumbnail" alt="${project.title}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                <img src="${screenshotUrl}" class="project-thumbnail" alt="${project.title}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='${project.image}'">
                 <div class="preview-badge">Preview</div>
             </div>
             <div class="project-content" data-link="${project.link}" style="cursor: pointer;">
@@ -32,7 +38,7 @@ function renderProjects(limit = null) {
                 <span class="project-link">View Project →</span>
             </div>
         </div>
-    `).join('');
+    `}).join('');
 }
 
 // Open preview modal with interactive iframe. Stops card click from firing.
