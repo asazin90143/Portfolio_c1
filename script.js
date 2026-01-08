@@ -25,8 +25,14 @@ function renderProjects(limit = null) {
 
         return `
         <div class="project-card" data-link="${project.link}">
-            <div class="project-preview" data-link="${project.link}" title="Open interactive preview">
-                <img src="${screenshotUrl}" class="project-thumbnail" alt="${project.title}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.src='${project.image}'">
+            <div class="project-preview loading" data-link="${project.link}" title="Open interactive preview">
+                <img src="${screenshotUrl}" 
+                     class="project-thumbnail" 
+                     alt="${project.title}" 
+                     loading="lazy" 
+                     style="width: 100%; height: 100%; object-fit: cover;" 
+                     onload="this.parentElement.classList.remove('loading')"
+                     onerror="this.parentElement.classList.remove('loading'); this.onerror=null; this.src='${project.image}'">
                 <div class="preview-badge">Preview</div>
             </div>
             <div class="project-content" data-link="${project.link}" style="cursor: pointer;">

@@ -232,7 +232,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 20% 50%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 80% 80%, rgba(45, 212, 191, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 40% 20%, rgba(45, 212, 191, 0.08) 0%, transparent 50%);
@@ -248,7 +248,7 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         radial-gradient(circle at 25% 25%, rgba(45, 212, 191, 0.03) 1px, transparent 1px),
         radial-gradient(circle at 75% 75%, rgba(45, 212, 191, 0.02) 1px, transparent 1px);
     background-size: 80px 80px, 120px 120px;
@@ -258,26 +258,31 @@ body::after {
 }
 
 @keyframes gradientShift {
-    0%, 100% {
-        background: 
+
+    0%,
+    100% {
+        background:
             radial-gradient(circle at 20% 50%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
             radial-gradient(circle at 80% 80%, rgba(45, 212, 191, 0.05) 0%, transparent 50%),
             radial-gradient(circle at 40% 20%, rgba(45, 212, 191, 0.08) 0%, transparent 50%);
     }
+
     25% {
-        background: 
+        background:
             radial-gradient(circle at 40% 60%, rgba(45, 212, 191, 0.12) 0%, transparent 50%),
             radial-gradient(circle at 60% 40%, rgba(45, 212, 191, 0.08) 0%, transparent 50%),
             radial-gradient(circle at 80% 70%, rgba(45, 212, 191, 0.06) 0%, transparent 50%);
     }
+
     50% {
-        background: 
+        background:
             radial-gradient(circle at 60% 30%, rgba(45, 212, 191, 0.1) 0%, transparent 50%),
             radial-gradient(circle at 30% 70%, rgba(45, 212, 191, 0.07) 0%, transparent 50%),
             radial-gradient(circle at 70% 50%, rgba(45, 212, 191, 0.08) 0%, transparent 50%);
     }
+
     75% {
-        background: 
+        background:
             radial-gradient(circle at 35% 35%, rgba(45, 212, 191, 0.11) 0%, transparent 50%),
             radial-gradient(circle at 75% 65%, rgba(45, 212, 191, 0.06) 0%, transparent 50%),
             radial-gradient(circle at 50% 80%, rgba(45, 212, 191, 0.09) 0%, transparent 50%);
@@ -288,6 +293,7 @@ body::after {
     0% {
         background-position: 0 0, 0 0;
     }
+
     100% {
         background-position: 80px 80px, 120px 120px;
     }
@@ -350,60 +356,80 @@ body::after {
 }
 
 @keyframes float1 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(100px, -100px);
     }
+
     50% {
         transform: translate(50px, 100px);
     }
+
     75% {
         transform: translate(-80px, 50px);
     }
 }
 
 @keyframes float2 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(-100px, 100px);
     }
+
     50% {
         transform: translate(-50px, -100px);
     }
+
     75% {
         transform: translate(80px, -50px);
     }
 }
 
 @keyframes float3 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(-80px, 80px);
     }
+
     50% {
         transform: translate(60px, 60px);
     }
+
     75% {
         transform: translate(-60px, -80px);
     }
 }
 
 @keyframes float4 {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(90px, 50px);
     }
+
     50% {
         transform: translate(-70px, 70px);
     }
+
     75% {
         transform: translate(40px, -90px);
     }
@@ -911,6 +937,23 @@ section {
     overflow: hidden;
 }
 
+/* Skeleton Loading State */
+.project-preview.loading {
+    background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-tertiary) 50%, var(--bg-secondary) 75%);
+    background-size: 200% 100%;
+    animation: skeletonLoading 1.5s infinite;
+}
+
+.project-preview.loading img,
+.project-preview.loading .preview-badge {
+    opacity: 0;
+}
+
+.project-preview img {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
 .project-preview iframe {
     width: 100%;
     height: 100%;
@@ -938,6 +981,16 @@ section {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     font-size: 1rem;
+}
+
+@keyframes skeletonLoading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .preview-badge {
