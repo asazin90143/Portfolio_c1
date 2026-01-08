@@ -11,14 +11,14 @@
         ]
     },
     {
-        "title": "Blog Platform",
-        "description": "Modern blogging platform with markdown support, SEO optimization, and analytics.",
+        "title": "Space Math",
+        "description": "A space-themed math game with interactive elements.",
         "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
-        "link": "https://asazin90143.github.io/blogofdeath/",
+        "link": "https://asazin90143.github.io/Space-Math/",
         "tags": [
-            "HTML",
+            "JavaScript",
             "CSS",
-            "PHP"
+            "HTML"
         ]
     },
     {
@@ -30,6 +30,17 @@
             "JavaScript",
             "CSS",
             "HTML"
+        ]
+    },
+    {
+        "title": "Blog Platform",
+        "description": "Modern blogging platform with markdown support, SEO optimization, and analytics.",
+        "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
+        "link": "https://asazin90143.github.io/blogofdeath/",
+        "tags": [
+            "HTML",
+            "CSS",
+            "PHP"
         ]
     },
     {
