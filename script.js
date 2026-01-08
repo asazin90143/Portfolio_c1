@@ -10,18 +10,25 @@ const projectsData = [
         tags: ["D3.js", "JavaScript", "Data Visualization"]
     },
     {
-        title: "Blog Platform",
-        description: "Modern blogging platform with markdown support, SEO optimization, and analytics.",
-        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
-        link: "https://asazin90143.github.io/blogofdeath/",
-        tags: ["HTML", "CSS", "PHP"]
-    },
-    {
         title: "Hero's Tasks",
         description: "Hero's Tasks is a gamified productivity app that turns your to-do list into an adventure.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
         link: "https://asazin90143.github.io/Heros-Tasks/",
         tags: ["Javacript", "CSS", "HTML"]
+    },
+    {
+        title: "Space Math ",
+        description: "Interactive math exercises while having fun.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        link: "https://asazin90143.github.io/Space-Math/",
+        tags: ["Javacript", "CSS", "HTML"]
+    },
+    {
+        title: "Blog Platform",
+        description: "Modern blogging platform with markdown support, SEO optimization, and analytics.",
+        image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
+        link: "https://asazin90143.github.io/blogofdeath/",
+        tags: ["HTML", "CSS", "PHP"]
     },
     {
         title: "Portfolio ",
