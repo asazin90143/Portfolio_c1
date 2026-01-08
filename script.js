@@ -10,20 +10,6 @@ const projectsData = [
         tags: ["D3.js", "JavaScript", "Data Visualization"]
     },
     {
-        title: "Hero's Tasks",
-        description: "Hero's Tasks is a gamified productivity app that turns your to-do list into an adventure.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-        link: "https://asazin90143.github.io/Heros-Tasks/",
-        tags: ["Javacript", "CSS", "HTML"]
-    },
-    {
-        title: "Space Math ",
-        description: "Interactive math exercises while having fun.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-        link: "https://asazin90143.github.io/Space-Math/",
-        tags: ["Javacript", "CSS", "HTML"]
-    },
-    {
         title: "Blog Platform",
         description: "Modern blogging platform with markdown support, SEO optimization, and analytics.",
         image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
@@ -31,11 +17,18 @@ const projectsData = [
         tags: ["HTML", "CSS", "PHP"]
     },
     {
+        title: "Hero's Tasks",
+        description: "Hero's Tasks is a gamified productivity app that turns your to-do list into an adventure.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        link: "https://asazin90143.github.io/Heros-Tasks/",
+        tags: ["JavaScript", "CSS", "HTML"]
+    },
+    {
         title: "Portfolio ",
         description: "Content management system for managing portfolio projects with drag-and-drop interface.",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
         link: "https://asazin90143.github.io/Portfolio_c1/index.html#home",
-        tags: ["Javacript", "CSS", "HTML"]
+        tags: ["JavaScript", "CSS", "HTML"]
     },
     {
         title: "E-Commerce Platform",
@@ -237,11 +230,11 @@ function renderProjects(limit = null) {
 
     projectsGrid.innerHTML = displayProjects.map(project => `
         <div class="project-card" data-link="${project.link}">
-            <div class="project-preview" onclick="openPreview(event, '${project.link}')" title="Open interactive preview">
-                <iframe src="${project.link}" class="project-iframe" loading="lazy" sandbox="allow-scripts allow-forms allow-same-origin" onerror="handlePreviewError(this)"></iframe>
+            <div class="project-preview" data-link="${project.link}" title="Open interactive preview">
+                <img src="${project.image}" class="project-thumbnail" alt="${project.title}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
                 <div class="preview-badge">Preview</div>
             </div>
-            <div class="project-content" onclick="window.open('${project.link}', '_blank')" style="cursor: pointer;">
+            <div class="project-content" data-link="${project.link}" style="cursor: pointer;">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
                 <div class="project-tags">
@@ -450,6 +443,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Show all projects and certifications on secondary pages
         renderProjects();
         renderCertificates();
+    }
+
+    // Setup Event Delegation for Projects Grid
+    const projectsGrid = document.getElementById('projectsGrid');
+    if (projectsGrid) {
+        projectsGrid.addEventListener('click', (e) => {
+            const preview = e.target.closest('.project-preview');
+            const content = e.target.closest('.project-content');
+
+            if (preview) {
+                const link = preview.dataset.link;
+                if (link) openPreview(e, link);
+            } else if (content) {
+                const link = content.dataset.link;
+                if (link) window.open(link, '_blank');
+            }
+        });
     }
 
     setupCertificateFilters();
