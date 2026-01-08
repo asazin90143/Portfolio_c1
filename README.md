@@ -5,6 +5,7 @@ A modern, responsive portfolio website designed to showcase projects and certifi
 ## Features
 
 - **Dynamic Content**: Projects and certificates are loaded externally from `projects.json` and `certificates.json`.
+- **Auto-Generated Thumbnails**: Project previews are automatically generated from live links with a skeleton loading state.
 - **Interactive Previews**: Projects can be previewed in a modal iframe without leaving the page.
 - **Filtering System**: Certificates can be filtered by category (Software, Data, Security, AI).
 - **Responsive Design**: Fully adaptable layout for mobile and desktop screens.
@@ -16,7 +17,8 @@ You can update your portfolio content by editing the JSON files. No HTML changes
 
 ### 1. Projects (`projects.json`)
 
-Add a new object to the array in `projects.json`:
+Add a new object to the array in `projects.json`.
+**Note:** The project thumbnail is automatically generated from the `link` URL. The `image` field is used as a fallback if the screenshot fails to load.
 
 ```json
 {
