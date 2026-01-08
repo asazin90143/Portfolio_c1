@@ -59,8 +59,8 @@ This repository uses **GitHub Actions** to deploy to GitHub Pages automatically.
 ## Project Structure
 
 - `index.html`: Main structure of the website.
-- `script.js`: Handles data fetching, rendering logic, and interactivity.
-- `style.css`: (Assumed) Styling for the website.
+- `script.js`: Handles data fetching, rendering logic, contact form, and interactivity.
+- `style.css`: Styling for the website, including animations.
 - `projects.json`: Data source for portfolio projects.
 - `certificates.json`: Data source for certifications.
 
