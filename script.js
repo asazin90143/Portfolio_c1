@@ -7,158 +7,7 @@ let projectsData = [];
 // Add, edit, or remove certificates here
 // Each certificate needs: title, issuer, date, category, link, icon, image
 // Categories: 'software', 'data', 'security', 'ai'
-const certificatesData = [
-    {
-        title: "SQL and Relational Databases 101",
-        issuer: "IBM Developer Skills Network",
-        date: "November 2023",
-        category: "data",
-        categoryLabel: "Data Science & Analytics",
-        link: "https://courses.cognitiveclass.ai/certificates/22721d0de4754dc5886de40f4bb5f99f",
-        icon: "📊",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate",
-        issuer: "Oracle",
-        date: "December 2023",
-        category: "data",
-        categoryLabel: "Data Science & Analytics",
-        link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=C8DF078141A0A68FB8C11EE850E33CABEB5F77F17B7809B100541DA7A119DEFA",
-        icon: "📊",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Oracle Cloud Data Management 2023 Certified Foundations Associate",
-        issuer: "Oracle",
-        date: "December 2023",
-        category: "data",
-        categoryLabel: "Data Science & Analytics",
-        link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=9871AF79E8C76FF7A0129D9709621DA7C507445372989DE1F38389AAE7256E8F",
-        icon: "📊",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
-    },
-    {
-        title: "AWS Certified Solutions Architect",
-        issuer: "Amazon Web Services",
-        date: "December 2024",
-        category: "software",
-        categoryLabel: "Software Development & Engineering",
-        link: "https://aws.amazon.com/certification/",
-        icon: "🏗️",
-        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Professional Scrum Master (PSM I)",
-        issuer: "Scrum.org",
-        date: "November 2024",
-        category: "software",
-        categoryLabel: "Software Development & Engineering",
-        link: "https://www.scrum.org/",
-        icon: "📊",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Machine Learning Specialization",
-        issuer: "Stanford University / Coursera",
-        date: "October 2024",
-        category: "ai",
-        categoryLabel: "Artificial Intelligence & ML",
-        link: "https://www.coursera.org/",
-        icon: "🤖",
-        image: "https://images.unsplash.com/photo-1505685296765-3a2736de412f?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Data Science Professional Certificate",
-        issuer: "IBM",
-        date: "September 2024",
-        category: "data",
-        categoryLabel: "Data Science & Analytics",
-        link: "https://www.ibm.com/training/",
-        icon: "📈",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop"
-    },
-    {
-        title: "CompTIA Security+",
-        issuer: "CompTIA",
-        date: "August 2024",
-        category: "security",
-        categoryLabel: "Cybersecurity & Networking",
-        link: "https://www.comptia.org/",
-        icon: "🔒",
-        image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Certified Ethical Hacker (CEH)",
-        issuer: "EC-Council",
-        date: "July 2024",
-        category: "security",
-        categoryLabel: "Cybersecurity & Networking",
-        link: "https://www.eccouncil.org/",
-        icon: "🛡️",
-        image: "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Deep Learning Specialization",
-        issuer: "DeepLearning.AI",
-        date: "June 2024",
-        category: "ai",
-        categoryLabel: "Artificial Intelligence & ML",
-        link: "https://www.deeplearning.ai/",
-        icon: "🧠",
-        image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Google Data Analytics Certificate",
-        issuer: "Google",
-        date: "May 2024",
-        category: "data",
-        categoryLabel: "Data Science & Analytics",
-        link: "https://grow.google/certificates/",
-        icon: "📊",
-        image: "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Full Stack Web Development",
-        issuer: "freeCodeCamp",
-        date: "April 2024",
-        category: "software",
-        categoryLabel: "Software Development & Engineering",
-        link: "https://www.freecodecamp.org/",
-        icon: "💻",
-        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Cisco CCNA",
-        issuer: "Cisco",
-        date: "March 2024",
-        category: "security",
-        categoryLabel: "Cybersecurity & Networking",
-        link: "https://www.cisco.com/",
-        icon: "🌐",
-        image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
-    },
-    {
-        title: "TensorFlow Developer Certificate",
-        issuer: "Google",
-        date: "February 2024",
-        category: "ai",
-        categoryLabel: "Artificial Intelligence & ML",
-        link: "https://www.tensorflow.org/certificate",
-        icon: "🔧",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
-    },
-    {
-        title: "Python for Data Science",
-        issuer: "DataCamp",
-        date: "January 2024",
-        category: "data",
-        categoryLabel: "Data Science & Analytics",
-        link: "https://www.datacamp.com/",
-        icon: "🐍",
-        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
-    }
-];
+let certificatesData = [];
 
 // ===== RENDER PROJECTS =====
 // This function creates the HTML for each project card
@@ -383,13 +232,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading projects:', error));
 
-    if (isMainPage) {
-        // Show only 3 featured projects and certifications on main page
-        renderCertificates('all', 3);
-    } else {
-        // Show all projects and certifications on secondary pages
-        renderCertificates();
-    }
+    fetch('certificates.json')
+        .then(response => response.json())
+        .then(data => {
+            certificatesData = data;
+            if (isMainPage) {
+                renderCertificates('all', 3);
+            } else {
+                renderCertificates();
+            }
+        })
+        .catch(error => console.error('Error loading certificates:', error));
 
     // Setup Event Delegation for Projects Grid
     const projectsGrid = document.getElementById('projectsGrid');
