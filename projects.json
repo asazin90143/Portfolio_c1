@@ -1,0 +1,90 @@
+[
+    {
+        "title": "Visuals1",
+        "description": "Interactive data visualizations and dashboards hosted on Render.",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
+        "link": "https://visuals1.onrender.com/",
+        "tags": [
+            "D3.js",
+            "JavaScript",
+            "Data Visualization"
+        ]
+    },
+    {
+        "title": "Blog Platform",
+        "description": "Modern blogging platform with markdown support, SEO optimization, and analytics.",
+        "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop",
+        "link": "https://asazin90143.github.io/blogofdeath/",
+        "tags": [
+            "HTML",
+            "CSS",
+            "PHP"
+        ]
+    },
+    {
+        "title": "Hero's Tasks",
+        "description": "Hero's Tasks is a gamified productivity app that turns your to-do list into an adventure.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        "link": "https://asazin90143.github.io/Heros-Tasks/",
+        "tags": [
+            "JavaScript",
+            "CSS",
+            "HTML"
+        ]
+    },
+    {
+        "title": "Portfolio ",
+        "description": "Content management system for managing portfolio projects with drag-and-drop interface.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        "link": "https://asazin90143.github.io/Portfolio_c1/index.html#home",
+        "tags": [
+            "JavaScript",
+            "CSS",
+            "HTML"
+        ]
+    },
+    {
+        "title": "E-Commerce Platform",
+        "description": "Full-stack online store with payment integration, inventory management, and admin dashboard.",
+        "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
+        "link": "https://github.com/yourusername/project1",
+        "tags": [
+            "React",
+            "Node.js",
+            "MongoDB"
+        ]
+    },
+    {
+        "title": "Weather Dashboard",
+        "description": "Real-time weather application with forecast data, interactive maps, and location tracking.",
+        "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
+        "link": "https://github.com/yourusername/project2",
+        "tags": [
+            "JavaScript",
+            "API",
+            "CSS3"
+        ]
+    },
+    {
+        "title": "Task Management App",
+        "description": "Collaborative project management tool with real-time updates and team features.",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
+        "link": "https://github.com/yourusername/project3",
+        "tags": [
+            "React",
+            "Firebase",
+            "Tailwind"
+        ]
+    },
+    {
+        "title": "Fitness Tracker",
+        "description": "Mobile-first app for tracking workouts, nutrition, and progress with data visualization.",
+        "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop",
+        "link": "https://github.com/yourusername/project5",
+        "tags": [
+            "React Native",
+            "Express",
+            "Chart.js"
+        ]
+    }
+]
