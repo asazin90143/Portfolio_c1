@@ -10,6 +10,7 @@ A modern, responsive portfolio website designed to showcase projects and certifi
 - **Filtering System**: Certificates can be filtered by category (Software, Data, Security, AI).
 - **Contact Form**: Functional contact form integrated with FormSubmit.
 - **Responsive Design**: Fully adaptable layout for mobile and desktop screens.
+- **Modern UI**: Features animated background orbs, glassmorphism effects, and smooth transitions.
 - **Automated Deployment**: Configured with GitHub Actions for seamless deployment to GitHub Pages.
 
 ## How to Update Content
