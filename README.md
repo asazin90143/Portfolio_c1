@@ -45,7 +45,7 @@ Add a new object to the array in `certificates.json`. Ensure the `category` matc
     "categoryLabel": "Software Development",
     "link": "https://credential-url.com",
     "icon": "🎓",
-    "image": "https://example.com/cert-image.jpg"
+    "image": "Cert/filename.png" // Can be a URL or local path like 'Cert/filename.png'
 }
 ```
 
