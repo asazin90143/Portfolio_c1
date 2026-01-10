@@ -20,7 +20,7 @@
             "CSS",
             "HTML"
         ]
-    }
+    },
     {
         "title": "Energy Watcher",
         "description": "Energy Watcher is a web application that helps users monitor their energy consumption and provides personalized recommendations to reduce their energy usage.",
@@ -31,7 +31,7 @@
             "CSS",
             "HTML"
         ]
-    },    
+    },
     {
         "title": "Hero's Tasks",
         "description": "Hero's Tasks is a gamified productivity app that turns your to-do list into an adventure.",
