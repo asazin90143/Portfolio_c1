@@ -633,7 +633,6 @@ body::after {
     display: flex;
     align-items: center;
     padding: var(--spacing-xl) 0;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     position: relative;
 }
 
@@ -786,7 +785,7 @@ section {
 
 /* ===== ABOUT SECTION ===== */
 .about {
-    background-color: var(--bg-secondary);
+    background-color: transparent;
 }
 
 .about-content {
@@ -937,7 +936,7 @@ section {
 
 /* ===== PROJECTS SECTION ===== */
 .projects {
-    background-color: var(--bg-secondary);
+    background-color: transparent;
 }
 
 .projects-grid {
@@ -1405,7 +1404,7 @@ section {
 
 /* ===== CONTACT SECTION ===== */
 .contact {
-    background-color: var(--bg-secondary);
+    background-color: transparent;
 }
 
 .contact-content {
@@ -1525,7 +1524,7 @@ section {
 
 /* ===== FOOTER ===== */
 .footer {
-    background-color: var(--bg-primary);
+    background-color: transparent;
     border-top: 1px solid var(--border-color);
     padding: var(--spacing-lg) 0 var(--spacing-md);
 }
@@ -1603,7 +1602,6 @@ section {
 
 .page-hero {
     padding: 140px 0 60px;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     border-bottom: 1px solid var(--border-color);
 }
 
