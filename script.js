@@ -293,13 +293,12 @@ function initTheme() {
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateIcons(newTheme);
 
-            // Re-init canvas particles to update color if needed
-            // initLiveBackground(); // Optional: if we want to change particle color
+            // Re-init canvas particles to update color
+            initLiveBackground();
         });
     }
 
@@ -423,10 +422,18 @@ function initLiveBackground() {
         }
     }
 
+    // Helper to get accent color
+    function getAccentColor(alpha = 1) {
+        const rootStyles = getComputedStyle(document.documentElement);
+        const accentRgb = rootStyles.getPropertyValue('--accent-rgb').trim();
+        return `rgba(${accentRgb}, ${alpha})`;
+    }
+
     // Create particle array
     function initParticles() {
         particlesArray = [];
         let numberOfParticles = (canvas.height * canvas.width) / 9000;
+        const color = getAccentColor(0.4);
 
         for (let i = 0; i < numberOfParticles; i++) {
             let size = (Math.random() * 2) + 1;
@@ -434,7 +441,6 @@ function initLiveBackground() {
             let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
             let directionX = (Math.random() * 0.4) - 0.2;
             let directionY = (Math.random() * 0.4) - 0.2;
-            let color = 'rgba(45, 212, 191, 0.4)';
 
             particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
         }
@@ -442,6 +448,11 @@ function initLiveBackground() {
 
     // Connect particles
     function connect() {
+        // Get base color components for dynamic opacity
+        const rootStyles = getComputedStyle(document.documentElement);
+        // Fallback to teal if variable not found
+        const accentRgb = rootStyles.getPropertyValue('--accent-rgb').trim() || '45, 212, 191';
+
         let opacityValue = 1;
         for (let a = 0; a < particlesArray.length; a++) {
             for (let b = a; b < particlesArray.length; b++) {
@@ -450,7 +461,7 @@ function initLiveBackground() {
 
                 if (distance < (canvas.width / 7) * (canvas.height / 7)) {
                     opacityValue = 1 - (distance / 20000);
-                    ctx.strokeStyle = 'rgba(45, 212, 191,' + opacityValue * 0.2 + ')';
+                    ctx.strokeStyle = `rgba(${accentRgb}, ${opacityValue * 0.2})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
