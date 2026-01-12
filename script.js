@@ -275,7 +275,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setupCertificateFilters();
     initLiveBackground();
+    initTheme();
 });
+
+// ===== THEME MANAGEMENT =====
+function initTheme() {
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+
+    // Check saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateIcons(savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcons(newTheme);
+
+            // Re-init canvas particles to update color if needed
+            // initLiveBackground(); // Optional: if we want to change particle color
+        });
+    }
+
+    function updateIcons(theme) {
+        if (theme === 'light') {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        } else {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        }
+    }
+}
 
 // ===== PREVIEW FALLBACKS =====
 function handlePreviewError(iframe) {
