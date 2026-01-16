@@ -31,7 +31,7 @@
         "tags": [
             "JavaScript",
             "CSS",
-            "HTML"  
+            "HTML"
         ]
     },
     {
@@ -68,6 +68,19 @@
         ]
     },
     {
+        "title": "Task Management App",
+        "description": "Collaborative project management tool with real-time updates and team features.",
+        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
+        "link": "https://tma-gugc.onrender.com",
+        "tags": [
+            "TypeScript",
+            "CSS",
+            "JavaScript",
+            "SQL",
+            "Node.js"
+        ]
+    },
+    {
         "title": "E-Commerce Platform",
         "description": "Full-stack online store with payment integration, inventory management, and admin dashboard.",
         "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
@@ -87,17 +100,6 @@
             "JavaScript",
             "API",
             "CSS3"
-        ]
-    },
-    {
-        "title": "Task Management App",
-        "description": "Collaborative project management tool with real-time updates and team features.",
-        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
-        "link": "https://github.com/yourusername/project3",
-        "tags": [
-            "React",
-            "Firebase",
-            "Tailwind"
         ]
     },
     {
