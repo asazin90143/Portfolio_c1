@@ -90,6 +90,15 @@
         ]
     },
     {
+        "title": "Return Tracking Count Dashboard",
+        "description": "Return Tracking Count Dashboard is a dashboard for analyzing and managing the data of returns.",
+        "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
+        "link": "https://public.tableau.com/views/ReturnTrackingCount_17458119773520/Dashboard1?:language=en-US&:sid=&:redirect=auth&showOnboarding=true&:display_count=n&:origin=viz_share_link",
+        "tags": [
+            "Tableau"
+        ]
+    },    
+    {
         "title": "E-Commerce Platform",
         "description": "Full-stack online store with payment integration, inventory management, and admin dashboard.",
         "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
