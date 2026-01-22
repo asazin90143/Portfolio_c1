@@ -81,12 +81,23 @@
         ]
     },
     {
+        "title": "Boardroom",
+        "description": "Boardroom is a digital bulletin board where users can post anything they want. .",
+        "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
+        "link": "https://boardroom-mu.vercel.app/",
+        "tags": [
+            "JavaScript",
+            "CSS",
+            "HTML"
+        ]
+    },
+    {
         "title": "Awesome Chocolates Dashboard",
         "description": "Awesome Chocolates is a dashboard for analyzing and managing the data of chocolates sales.",
         "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
         "link": "https://public.tableau.com/app/profile/kenneth.bryan.escala/viz/AwesomeChocolates_17433902921190/AwesomeChocolates",
         "tags": [
-            "Tableau"  
+            "Tableau"
         ]
     },
     {
@@ -97,7 +108,7 @@
         "tags": [
             "Tableau"
         ]
-    },    
+    },
     {
         "title": "Worldwide Importers Dashboard",
         "description": "Worldwide Importers Dashboard is a dashboard for analyzing and managing the data of importers world.",
@@ -115,7 +126,7 @@
         "tags": [
             "Tableau"
         ]
-    },        
+    },
     {
         "title": "E-Commerce Platform",
         "description": "Full-stack online store with payment integration, inventory management, and admin dashboard.",
