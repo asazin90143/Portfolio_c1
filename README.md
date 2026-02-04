@@ -70,3 +70,24 @@ This repository uses **GitHub Actions** to deploy to GitHub Pages automatically.
 - HTML5, CSS3
 - JavaScript (ES6+)
 - GitHub Actions
+
+## Projects
+
+| Project | Description | Tech Stack | Link |
+|---------|-------------|------------|------|
+| **Visuals1** | Interactive data visualizations and dashboards hosted on Render. | D3.js, JavaScript, Data Visualization | [Live Demo](https://visuals1.onrender.com/) |
+| **Boardroom** | Digital bulletin board for user posts. | JavaScript, CSS, HTML, Firebase, PostgreSQL | [Live Demo](https://boardroom-mu.vercel.app/) |
+| **Energy Watcher** | Energy consumption monitoring application. | JavaScript, CSS, HTML | [Live Demo](https://asazin90143.github.io/Energy-Watcher/) |
+| **Hero's Tasks** | Gamified productivity app. | JavaScript, CSS, HTML | [Live Demo](https://asazin90143.github.io/Heros-Tasks/) |
+| **Space Math** | Space-themed math game. | JavaScript, SQL, Node.js, CSS, HTML | [Live Demo](https://space-math.onrender.com/) |
+| **Blog Platform** | Modern blogging platform. | HTML, CSS, PHP | [Live Demo](https://asazin90143.github.io/blogofdeath/) |
+| **Portfolio** | Content management system for portfolio projects. | JavaScript, CSS, HTML | [Live Demo](https://asazin90143.github.io/Portfolio_c1/index.html#home) |
+| **Task Management App** | Collaborative project management tool. | TypeScript, CSS, JavaScript, SQL, Node.js | [Live Demo](https://tma-gugc.onrender.com) |
+| **Awesome Chocolates** | Dashboard for analyzing chocolate sales data. | Tableau | [View](https://public.tableau.com/app/profile/kenneth.bryan.escala/viz/AwesomeChocolates_17433902921190/AwesomeChocolates) |
+| **Return Tracking** | Dashboard for analyzing return data. | Tableau | [View](https://public.tableau.com/views/ReturnTrackingCount_17458119773520/Dashboard1) |
+| **Worldwide Importers** | Dashboard for analyzing importers data. | Tableau | [View](https://public.tableau.com/app/profile/kenneth.bryan.escala/viz/WorldwideImporters-EscalaKennethBryanG_/Dashboard1) |
+| **Superstore Profits** | Dashboard for analyzing superstore profits. | Tableau | [View](https://public.tableau.com/app/profile/kenneth.bryan.escala/viz/SuperstoreProfits_17439956785620/ProfitbyState) |
+| **E-Commerce Platform** | Full-stack online store. | React, Express, Node.js, MongoDB | [Live Demo](https://step-up-smoky.vercel.app/) |
+| **Weather Dashboard** | Real-time weather application. | JavaScript, API, CSS3 | [Repo](https://github.com/yourusername/project2) |
+| **Fitness Tracker** | Mobile-first app for tracking workouts. | React Native, Express, Chart.js | [Repo](https://github.com/yourusername/project5) |
+
