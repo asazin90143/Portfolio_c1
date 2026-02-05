@@ -130,8 +130,8 @@
         ]
     },
     {
-        "title": "E-Commerce Platform",
-        "description": "Full-stack online store with payment integration, inventory management, and admin dashboard.",
+        "title": "Step-Up",
+        "description": "Step-Up is an online store with payment integration, inventory management, and admin dashboard.",
         "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=400&h=300&fit=crop",
         "link": "https://step-up-smoky.vercel.app/",
         "tags": [
