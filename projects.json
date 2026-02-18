@@ -142,6 +142,17 @@
         ]
     },
     {
+        "title": "  ",
+        "description": "Its a fighting game mainly coded with javascript",
+        "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
+        "link": "avatar-two-gold.vercel.app",
+        "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS3"
+        ]
+    },
+    {
         "title": "Weather Dashboard",
         "description": "Real-time weather application with forecast data, interactive maps, and location tracking.",
         "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
