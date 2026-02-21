@@ -50,6 +50,16 @@
         "image": "Cert/Introduction to SQL.jpg"
     },
     {
+        "title": "Introduction to ChatGPT",
+        "issuer": "Datacamp",
+        "date": "February 2026",
+        "category": "data",
+        "categoryLabel": "Data Science & Analytics",
+        "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/1e48485768f87363c4b58cbfbdb404d92d5d26fc",
+        "icon": "📊",
+        "image": "Cert/Introduction to ChatGPT.jpg"
+    },
+    {
         "title": "Professional Scrum Master (PSM I)",
         "issuer": "Scrum.org",
         "date": "November 2024",
