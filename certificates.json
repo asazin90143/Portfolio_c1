@@ -40,6 +40,16 @@
         "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop"
     },
     {
+        "title": "Introduction to SQL",
+        "issuer": "Datacamp",
+        "date": "February 2026",
+        "category": "data",
+        "categoryLabel": "Data Science & Analytics",
+        "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/84412bbc8bbb279e4dd19dc66165a730afafa370",
+        "icon": "📊",
+        "image": "Cert/Introduction to SQL.jpg"
+    },
+    {
         "title": "Professional Scrum Master (PSM I)",
         "issuer": "Scrum.org",
         "date": "November 2024",
