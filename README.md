@@ -42,12 +42,31 @@ Add a new object to the array in `certificates.json`. Ensure the `category` matc
     "issuer": "Organization",
     "date": "Month Year",
     "category": "software",
-    "categoryLabel": "Software Development",
+    "categoryLabel": "Software Development & Engineering",
     "link": "https://credential-url.com",
     "icon": "🎓",
-    "image": "Cert/filename.png" // Can be a URL or local path like 'Cert/filename.png'
+    "image": "Cert/filename.png"
 }
 ```
+
+#### Category & Category Label Reference
+
+The `category` field is the **filter key** (used internally for filtering). The `categoryLabel` is the **display name** shown on the certificate card. You **must** use one of the exact pairs below:
+
+| `category` | `categoryLabel` | Description | Suggested Icons |
+|------------|-----------------|-------------|-----------------|
+| `software` | `Software Development & Engineering` | Web development, full-stack, DevOps, cloud architecture, Scrum, etc. | 💻 🏗️ ⚙️ |
+| `data` | `Data Science & Analytics` | Data analysis, SQL, databases, data visualization, Python for data, etc. | 📊 📈 🐍 |
+| `security` | `Cybersecurity & Networking` | Network security, ethical hacking, CompTIA, Cisco, penetration testing, etc. | 🔒 🛡️ 🌐 |
+| `ai` | `Artificial Intelligence & ML` | Machine learning, deep learning, TensorFlow, NLP, computer vision, etc. | 🤖 🧠 🔧 |
+
+> **Important:** The `category` value must be **lowercase** and match exactly one of the four keys above. The `categoryLabel` must also match exactly as shown — these are the labels displayed on the website's filter buttons and certificate cards.
+
+#### Image Field
+
+The `image` field can be either:
+- A **local path** to a certificate image stored in the `Cert/` folder (e.g., `"Cert/my-certificate.png"`)
+- An **external URL** to an image (e.g., `"https://example.com/cert-image.jpg"`)
 
 ## Deployment
 
